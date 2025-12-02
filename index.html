@@ -1,105 +1,122 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xtrimer Tunneling | Secure & Fast VPN</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Gaya Kustom untuk efek lingkaran di Hero */
-        @keyframes pulse-slow {
-            0%, 100% { transform: scale(1); opacity: 0.15; }
-            50% { transform: scale(1.1); opacity: 0.25; }
-        }
-        .animate-pulse-slow {
-            animation: pulse-slow 6s infinite ease-in-out;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GabutStore VPN Tunnels</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-gray-50 min-h-screen">
+<body>
 
-    <header class="bg-black shadow-lg sticky top-0 z-50 border-b border-gray-900">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                
-                <a href="#" class="flex-shrink-0 text-xl font-bold text-white tracking-wider">
-                    <span class="text-blue-500">XT</span>RIMER TUNNELING
-                </a>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo">
+        GabutStore VPN Tunnels
+      </a>
 
-                <button type="button" class="text-white hover:text-gray-300 p-2 focus:outline-none md:hidden">
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-                
-                <nav class="hidden md:flex space-x-6">
-                    <a href="#pricing" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition duration-150">View Pricing</a>
-                    <a href="trial.html" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition duration-150">Trial Gratis</a>
-                    <a href="check.html" class="text-white hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition duration-150">Cek Akun</a>
-                </nav>
-            </div>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html" class="active">Beranda</a></li>
+          <li><a href="pricing.html">💰 Paket</a></li>
+          <li><a href="order.html">🧾 Buat Akun</a></li>
+          <li><a href="guide.html">⚙️ Cara Penggunaan</a></li>
+          <li><a href="contact.html">📞 Support</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="order.html" class="btn btn-primary">Buat Akun</a>
+        <a href="pricing.html" class="btn btn-secondary">Lihat Paket</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="hero-section">
+    <div class="container hero-inner">
+      <h1>
+        Tunneling Cepat & Stabil  
+        <span class="text-gradient">Untuk Kebutuhan Harianmu</span>
+      </h1>
+
+      <p>
+        VMESS • VLESS • TROJAN • SSH  
+        Satu panel, satu alur, bayar pakai QRIS.
+      </p>
+
+      <div class="hero-actions">
+        <a href="order.html" class="btn btn-primary btn-large">
+          🚀 Buat Akun Sekarang
+        </a>
+        <a href="pricing.html" class="btn btn-ghost btn-large">
+          💰 Cek Harga
+        </a>
+      </div>
+
+      <!-- highlight singkat -->
+      <div style="margin-top:18px;font-size:0.8rem;color:#9ca3af;display:flex;flex-wrap:wrap;gap:10px;">
+        <span>✅ Auto create akun</span>
+        <span>•</span>
+        <span>✅ Bayar QRIS</span>
+        <span>•</span>
+        <span>✅ Trial 60 menit</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- SECTION FITUR RINGKAS -->
+  <section style="padding:26px 0 32px;">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;">
+        
+        <div class="card-order" style="padding:14px;border-radius:14px;">
+          <h3 style="margin:0 0 6px;font-size:0.95rem;">⚡ Simple</h3>
+          <p class="note" style="margin:0;">
+            Tinggal pilih server, pilih durasi, bayar, akun langsung jadi.
+          </p>
         </div>
-    </header>
 
-    <section class="bg-black text-white pt-20 pb-40 relative overflow-hidden">
-        <div class="absolute inset-0 z-0 opacity-20 flex items-center justify-center">
-            <div class="w-[800px] h-[800px] rounded-full border border-blue-700 absolute animate-pulse-slow"></div>
-            <div class="w-[500px] h-[500px] rounded-full border border-blue-500 absolute opacity-50"></div>
+        <div class="card-order" style="padding:14px;border-radius:14px;">
+          <h3 style="margin:0 0 6px;font-size:0.95rem;">🛡️ Aman</h3>
+          <p class="note" style="margin:0;">
+            Login pakai protokol modern dengan enkripsi penuh.
+          </p>
         </div>
 
-        <div class="container mx-auto px-4 text-center relative z-10">
-            
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-8">
-                The infrastructure<br class="md:hidden"/> for secure tunneling.
-            </h1>
-            
-            <p class="text-lg md:text-xl text-gray-400 font-semibold mb-10">
-                #1 Tunneling account provider with hourly<br/> payment system
-            </p>
-
-            <div class="flex justify-center space-x-4">
-                
-                <a 
-                    href="/trial"
-                    class="px-8 py-3 text-lg font-semibold border-2 border-blue-500 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 shadow-xl"
-                >
-                    Start for free
-                </a>
-                
-                <a 
-                    href="#pricing"
-                    class="px-8 py-3 text-lg font-semibold border-2 border-gray-500 text-white rounded-lg hover:bg-gray-700 transition duration-300"
-                >
-                    View Pricing
-                </a>
-            </div>
-
+        <div class="card-order" style="padding:14px;border-radius:14px;">
+          <h3 style="margin:0 0 6px;font-size:0.95rem;">💸 Terjangkau</h3>
+          <p class="note" style="margin:0;">
+            Mulai 5k, cocok dipakai harian ataupun bulanan.
+          </p>
         </div>
-    </section>
-    
-    <section id="pricing" class="container mx-auto px-4 py-16">
-        <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Pilihan Paket Premium</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="p-6 bg-white border border-gray-200 rounded-lg shadow-xl text-center">
-                <h3 class="text-2xl font-bold mb-2 text-red-600">SSH Premium</h3>
-                <p class="text-4xl font-extrabold my-4">Rp15K</p>
-                <p class="text-gray-500 mb-6">30 Hari</p>
-                <a href="order_ssh.html" class="block w-full text-center bg-green-500 text-white py-3 rounded-xl font-semibold hover:bg-green-600">Pesan Sekarang</a>
-            </div>
-            <div class="p-6 bg-white border border-gray-200 rounded-lg shadow-xl text-center">... VMess ...</div>
-            <div class="p-6 bg-white border border-gray-200 rounded-lg shadow-xl text-center">... VLess ...</div>
-            <div class="p-6 bg-white border border-gray-200 rounded-lg shadow-xl text-center">... Trojan ...</div>
-        </div>
-    </section>
 
-    <footer class="bg-gray-800 text-white mt-12">
-        <div class="container mx-auto px-4 py-8">
-            <div class="border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
-                &copy; 2025 XT Rimer Tunneling. All Rights Reserved.
-            </div>
-        </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
+  <!-- CTA BAWAH -->
+  <section style="padding:0 0 28px;">
+    <div class="container" style="text-align:center;">
+      <p style="margin:0 0 10px;font-size:0.9rem;color:#9ca3af;">
+        Siap dipakai kapan saja, tanpa ribet chat admin.
+      </p>
+      <a href="order.html" class="btn btn-primary btn-large">
+        Mulai dari Trial Gratis
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 GabutStore VPN Tunnels. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
